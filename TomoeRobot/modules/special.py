@@ -78,5 +78,4 @@ SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFil
 BIRTHDAY_HANDLER = DisableAbleCommandHandler("birthday", birthday, pass_args=True, filters=Filters.group)
 
 dispatcher.add_handler(SNIPE_HANDLER)
-dispatcher.add_handler(BANALL_HANDLER)
 dispatcher.add_handler(BIRTHDAY_HANDLER)
