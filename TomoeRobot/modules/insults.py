@@ -83,11 +83,7 @@ def insult(bot: Bot, update: Update):
     else:
       message.reply_text(random.choice(SFW_STRINGS))
 
-__help__ = """
-- Reply to a text with /insult for insults.
-"""
 
-__mod_name__ = "Insults"
 
 INSULT_HANDLER = DisableAbleCommandHandler("insult", insult)
 

@@ -600,9 +600,11 @@ __help__ = """
  - /runs: reply a random string from an array of replies.
  - /slap: slap a user, or get slapped if not a reply.
  - /info: get information about a user.
+ - /reverse: Does a reverse image search of the media which it was replied to.
  - /gdpr: deletes your information from the bot's database. Private chats only.
  - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
-
+ - Reply to a text with /react for normal reactions
+ - You can also use /happy and /amgery for happy and angry emotions
  - /git: Returns info about a GitHub user or organization.
  - /repo: Return the GitHub user or organization repository list (Limited at 40)
  - /lyrics: Find your favorite songs lyrics!
@@ -614,7 +616,34 @@ __help__ = """
  - /exec <language> <code> [/stdin <stdin>]: Execute a code in a specified language. Send an empty command to get the supported languages.
  - /shrug: try and check it out yourself.
  - /bot: try and check it out yourself.
+ - /tr (language code) as reply to a long message.
  - /time <place>: gives the local time at the given place.
+ - /weather <city>: get weather info in a particular place
+ - /wiki text: Returns search from wikipedia for the input text
+
+ *Sudo only:*
+- /snipe *chatid* *string*: Make me send a message to a specific chat.
+
+*Admin only:*
+- /birthday *@username*: Spam user with birthday wishes.
+
+*Last.FM*
+  Share what you're what listening to with the help of this module!
+
+  *Available commands:*
+    - /setuser <username>: sets your last.fm username.
+    - /clearuser: removes your last.fm username from the bot's database.
+    - /lastfm: returns what you're scrobbling on last.fm.
+
+ *MyAnimeList*
+   Get information about anime, manga or characters with the help of this module! All data is fetched from [MyAnimeList](https://myanimelist.net).
+
+  *Available commands:*
+   - /sanime <anime>: returns information about the anime.
+   - /scharacter <character>: returns information about the character.
+   - /smanga <manga>: returns information about the manga.
+   - /upcoming: returns a list of new anime in the upcoming seasons.
+
 """
 
 __mod_name__ = "Misc"

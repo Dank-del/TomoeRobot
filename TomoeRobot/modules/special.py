@@ -73,21 +73,8 @@ def birthday(bot: Bot, update: Update, args: List[str]):
         bdaymessage = random.choice(MESSAGES)
         update.effective_message.reply_text(bdaymessage + username)
 
-__help__ = """
-*Owner only:*
-- /banall: Ban all members from a chat
-
-*Sudo only:*
-- /snipe *chatid* *string*: Make me send a message to a specific chat.
-
-*Admin only:*
-- /birthday *@username*: Spam user with birthday wishes.
-"""
-
-__mod_name__ = "Special"
 
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFilters.sudo_filter)
-BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
 BIRTHDAY_HANDLER = DisableAbleCommandHandler("birthday", birthday, pass_args=True, filters=Filters.group)
 
 dispatcher.add_handler(SNIPE_HANDLER)

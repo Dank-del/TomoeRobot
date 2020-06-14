@@ -324,7 +324,12 @@ Some memes command, find it all out yourself!
 /kim: Does the same as /hitler but with Kim Jong Un instead (O no plox dont bomb my house)
 /pidor: 4pda memes
 /shout: Write anything that u want it to should
+- Reply to a text with /insult for insults.
 /zalgofy: reply to a message to g̫̞l̼̦i̎͡tͫ͢c̘ͭh̛̗ it out!
+*EMOJI*
+- Reply to a text with /🅱️ or /😂 or /👏
+- You can also use the text version of these : /bmoji or /copypasta or /clapmoji
+
 """
 
 __mod_name__ = "Memes and etc."
