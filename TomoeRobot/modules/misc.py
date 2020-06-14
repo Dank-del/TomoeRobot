@@ -620,6 +620,7 @@ __help__ = """
  - /time <place>: gives the local time at the given place.
  - /weather <city>: get weather info in a particular place
  - /wiki text: Returns search from wikipedia for the input text
+ - /lyrics <song>: returns the lyrics of that song.
 
  *Sudo only:*
 - /snipe *chatid* *string*: Make me send a message to a specific chat.
