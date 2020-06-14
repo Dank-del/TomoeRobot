@@ -9,7 +9,7 @@ from telegram.ext import MessageHandler, Filters, CommandHandler, run_async, Cal
 from telegram.utils.helpers import mention_markdown, mention_html, escape_markdown
 
 import TomoeRobot.modules.sql.welcome_sql as sql
-from TomoeRobot import dispatcher, OWNER_ID, LOGGER, MESSAGE_DUMP
+from TomoeRobot import dispatcher, OWNER_ID, LOGGER, MESSAGE_DUMP, sw
 from TomoeRobot.modules.helper_funcs.chat_status import user_admin, is_user_ban_protected
 from TomoeRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
 from TomoeRobot.modules.helper_funcs.msg_types import get_welcome_type
@@ -89,6 +89,12 @@ def new_member(bot: Bot, update: Update):
         sent = None
         new_members = update.effective_message.new_chat_members
         for new_mem in new_members:
+
+            if sw != None:
+                sw_ban = sw.get_ban(new_mem.id)
+                if sw_ban:
+                    return
+
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 bot.send_message(chat.id, "Hi. My Godfather just joined the group, Please behave on yourself 😒")
@@ -204,6 +210,11 @@ def left_member(bot: Bot, update: Update):
     if should_goodbye:
         left_mem = update.effective_message.left_chat_member
         if left_mem:
+
+            if sw != None:
+                sw_ban = sw.get_ban(left_mem.id)
+                if sw_ban:
+                    return
 
             # Ignore bot being kicked
             if left_mem.id == bot.id:
