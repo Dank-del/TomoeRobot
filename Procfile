@@ -1,2 +1,2 @@
-web: python3.6 -m haruka
-worker: python3.6 -m haruka
+web: python3.6 -m TomoeRobot
+worker: python3.6 -m TomoeRobot
