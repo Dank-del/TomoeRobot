@@ -28,3 +28,4 @@ alphabet_detector
 jikanpy
 tswift
 coffeehouse
+spamwatch
