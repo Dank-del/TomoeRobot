@@ -1,2 +1,2 @@
-web: python3.6 -m TomoeRobot
-worker: python3.6 -m TomoeRobot
+web: python3 -m TomoeRobot
+worker: python3 -m TomoeRobot
