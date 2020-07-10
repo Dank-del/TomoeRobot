@@ -28,6 +28,7 @@ My repository: [Tomoe](https://github.com/Dank-del/TomoeRobot)
 
 Click the Help button below to find out more about how to use me to my full potential."""
 
+TOMOE_IMG = "https://telegra.ph/file/454c5d754062b80264055.jpg"
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -143,7 +144,10 @@ def send_start(bot, update):
     keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
-    update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo(TOMOE_IMG,
+                PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Add Tomoe to your group",
+                                                                       url="t.me/{}?startgroup=true".format(bot.username))]]))
 
 
 def control_panel(bot, update):
