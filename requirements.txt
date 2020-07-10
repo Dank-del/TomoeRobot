@@ -29,3 +29,4 @@ jikanpy
 tswift
 coffeehouse
 spamwatch
+nekos.py
