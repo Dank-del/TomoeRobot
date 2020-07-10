@@ -145,7 +145,7 @@ def send_start(bot, update):
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_photo(TOMOE_IMG,
-                PM_START.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+                PM_START.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),reply_markup=InlineKeyboardMarkup(keyboard),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Add Tomoe to your group",
                                                                        url="t.me/{}?startgroup=true".format(bot.username))]]))
 
