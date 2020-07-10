@@ -23,7 +23,7 @@ from TomoeRobot.modules.connection import connected
 PM_START = """Hello {}, my name is {}!
 
 I'm a group management bot with a few fun extras [;)](https://images4.alphacoders.com/963/963224.jpg)
-An [anime](https://telegra.ph/file/454c5d754062b80264055.jpg) themed fork of [TomoeRobot Aya](https://gitlab.com/HarukaNetwork/OSS/HarukaAya)
+An [anime](https://telegra.ph/file/454c5d754062b80264055.jpg) themed fork of [Haruka Aya](https://gitlab.com/HarukaNetwork/OSS/HarukaAya)
 My repository: [Tomoe](https://github.com/Dank-del/TomoeRobot)
 
 Click the Help button below to find out more about how to use me to my full potential."""
